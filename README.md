@@ -1,5 +1,5 @@
-Tembak paket teri
+Tembak paket TRHEE 
 
-git clone https://github.com/opakenak/teri </br>
+git clone https://github.com/Afdhan/worldssh  </br>
 cd teri </br>
-php teri.php </br>
+php worldssh.php </br>
