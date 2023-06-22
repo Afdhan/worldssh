@@ -21,7 +21,7 @@ organizationalunit=WORLDSSH.COM
 commonname=www.worldssh.com
 email=worldssh.official@gmail.com
 
-curl -sS https://worldssh.com/api/sc/latest/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/Afdhan/worldssh/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 cd
@@ -71,7 +71,7 @@ apt -y install wget curl
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 
-wget https://worldssh.com/api/sc/latest/ssh/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
+wget https://raw.githubusercontent.com/Afdhan/worldssh/main/ssh/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
 
 
 # set locale
@@ -117,13 +117,13 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://worldssh.com/api/sc/latest/ssh/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Afdhan/worldssh/main/ssh/nginx.conf"
 mkdir -p /home/vps/public_html
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://worldssh.com/api/sc/latest/ssh/newudpgw"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/Afdhan/worldssh/main/ssh/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -268,13 +268,13 @@ cd /usr/bin
 
 # menu ssh ovpn
 # wget -O m-sshovpn "https://worldssh.com/api/sc/latest/menu/m-sshovpn.sh"
-wget -O addssh "https://worldssh.com/api/sc/latest/ssh/addssh.sh"
+wget -O addssh "https://raw.githubusercontent.com/Afdhan/worldssh/main/ssh/addssh.sh"
 # wget -O trial "https://worldssh.com/api/sc/latest/ssh/trial.sh"
-wget -O renew "https://worldssh.com/api/sc/latest/ssh/renew.sh"
-wget -O hapus "https://worldssh.com/api/sc/latest/ssh/hapus.sh"
-wget -O cek "https://worldssh.com/api/sc/latest/ssh/cek.sh"
+wget -O renew "https://raw.githubusercontent.com/Afdhan/worldssh/main/ssh/renew.sh"
+wget -O hapus "https://raw.githubusercontent.com/Afdhan/worldssh/main/ssh/hapus.sh"
+wget -O cek "https://raw.githubusercontent.com/Afdhan/worldssh/main/ssh/cek.sh"
 # wget -O member "https://worldssh.com/api/sc/latest/ssh/member.sh"
-wget -O delete "https://worldssh.com/api/sc/latest/ssh/delete.sh"
+wget -O delete "https://raw.githubusercontent.com/Afdhan/worldssh/main/ssh/delete.sh"
 # wget -O autokill "https://worldssh.com/api/sc/latest/ssh/autokill.sh"
 # wget -O ceklim "https://worldssh.com/api/sc/latest/ssh/ceklim.sh"
 # wget -O tendang "https://worldssh.com/api/sc/latest/ssh/tendang.sh"
@@ -283,14 +283,14 @@ wget -O delete "https://worldssh.com/api/sc/latest/ssh/delete.sh"
 # menu system
 # wget -O m-system "https://worldssh.com/api/sc/latest/menu/m-system.sh"
 # wget -O m-domain "https://worldssh.com/api/sc/latest/menu/m-domain.sh"
-wget -O add-host "https://worldssh.com/api/sc/latest/ssh/add-host.sh"
+wget -O add-host "https://raw.githubusercontent.com/Afdhan/worldssh/main/ssh/add-host.sh"
 #wget -O port-change "https://worldssh.com/api/sc/latest/port/port-change.sh"
-wget -O certv2ray "https://worldssh.com/api/sc/latest/xray/certv2ray.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/Afdhan/worldssh/main/xray/certv2ray.sh"
 #wget -O m-webmin "https://worldssh.com/api/sc/latest/menu/m-webmin.sh"
-wget -O speedtest "https://worldssh.com/api/sc/latest/ssh/speedtest_cli.py"
+wget -O speedtest "https://raw.githubusercontent.com/Afdhan/worldssh/main/ssh/speedtest_cli.py"
 #wget -O about "https://worldssh.com/api/sc/latest/menu/about.sh"
 # wget -O auto-reboot "https://worldssh.com/api/sc/latest/menu/auto-reboot.sh"
-wget -O restart "https://worldssh.com/api/sc/latest/menu/restart.sh"
+wget -O restart "https://raw.githubusercontent.com/Afdhan/worldssh/main/menu/restart.sh"
 # wget -O bw "https://worldssh.com/api/sc/latest/menu/bw.sh"
 # wget -O m-tcp "https://worldssh.com/api/sc/latest/menu/tcp.sh"
 
@@ -300,7 +300,7 @@ wget -O restart "https://worldssh.com/api/sc/latest/menu/restart.sh"
 #wget -O port-tr "https://worldssh.com/api/sc/latest/port/port-tr.sh"
 
 
-wget -O xp "https://worldssh.com/api/sc/latest/ssh/xp.sh"
+wget -O xp "https://raw.githubusercontent.com/Afdhan/worldssh/main/ssh/xp.sh"
 #wget -O asu "https://worldssh.com/api/sc/latest/asu.sh"
 # wget -O sshws "https://worldssh.com/api/sc/latest/ssh/sshws.sh"
 
