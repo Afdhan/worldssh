@@ -124,18 +124,18 @@ apt install python -y >/dev/null 2>&1
 echo -e "[ ${green}INFO${NC} ] Aight good ... installation file is ready"
 echo -ne "[ ${green}INFO${NC} ] Check permission : "
 
-PERMISSION
-if [ -f /home/needupdate ]; then
-red "Your script need to update first !"
-exit 0
-elif [ "$res" = "Permission Accepted..." ]; then
-green "Permission Accepted!"
-else
-red "Permission Denied!"
-rm setup.sh > /dev/null 2>&1
-sleep 0.5
-exit 0
-fi
+# PERMISSION
+# if [ -f /home/needupdate ]; then
+# red "Your script need to update first !"
+# exit 0
+# elif [ "$res" = "Permission Accepted..." ]; then
+# green "Permission Accepted!"
+# else
+# red "Permission Denied!"
+# rm setup.sh > /dev/null 2>&1
+# sleep 0.5
+# exit 0
+# fi
 
 mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
